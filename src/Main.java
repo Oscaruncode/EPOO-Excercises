@@ -2,7 +2,7 @@
 
 public class Main{
     public static void main(String args[]) {
-        Window window = new Window();
+        MenuPrincipal window = new MenuPrincipal();
         window.setLocationRelativeTo(null);
         window.setVisible(true);
     }

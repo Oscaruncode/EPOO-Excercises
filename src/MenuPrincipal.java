@@ -6,15 +6,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Window extends JFrame {
-    public Window() {
+public class MenuPrincipal extends JFrame {
+    public MenuPrincipal() {
         super("Programa amistoso");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400,400);
         JPanel panel1 = new JPanel(new FlowLayout());
 
         //Nombres de los botones
-        String[] buttonNames = {"Cambio", "Tapa Roja", "Salir"};
+        String[] buttonNames = {"Cambio", "Tapa Roja","Problema", "Salir"};
         Font fuenteBtn = new Font("Verdana", Font.BOLD, 12);
 
         //Crear botones
@@ -52,8 +52,11 @@ public class Window extends JFrame {
                 TapaRojaWindow tapaRojaWindow = new TapaRojaWindow();
                 tapaRojaWindow.setVisible(true);
                 // Lógica para el botón "Tapa Roja"
-            }else{
-                JOptionPane.showMessageDialog(null,"Boton desconocido");
+            } else if (buttonName.equals("Problema")) {
+                Problema problemaWindow = new Problema();
+                problemaWindow.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Boton desconocido");
                 System.exit(0);
             }
         }
