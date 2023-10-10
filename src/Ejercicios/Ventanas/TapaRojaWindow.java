@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicios.Ventanas;
 
 import Ejercicios.clasesBase.VentanaConBoton;
 
@@ -14,6 +14,7 @@ public class TapaRojaWindow extends VentanaConBoton {
         final int onzasPorCopa = 8;
         String texto = getTextField();
         String valorString = texto.replace("Onzas: ","");
+        String emojiCopas = "";
 
         try{
             double onzasE = Double.parseDouble(valorString);
@@ -25,7 +26,11 @@ public class TapaRojaWindow extends VentanaConBoton {
                copasS = Math.ceil(copasS);
             }
 
-            JOptionPane.showMessageDialog(this, "Cantidad de onzas: " + String.format("%.0f",onzasE) + "\n Cantidad de copas: " + String.format("%.0f",copasS));
+            for(int i=0;i<copasS;i++){
+                emojiCopas += "\uD83E\uDD43 ";
+            }
+
+            JOptionPane.showMessageDialog(this, "Cantidad de onzas: " + String.format("%.0f",onzasE) + "\n Cantidad de copas: " + String.format("%.0f",copasS) + "\n"+ emojiCopas);
 
         }catch (NumberFormatException ex) {
             // Manejo de errores si la entrada no es un número válido

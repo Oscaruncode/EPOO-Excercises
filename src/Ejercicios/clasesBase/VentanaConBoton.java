@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class VentanaConBoton extends JFrame {
-    private JPanel panel;
+    public JPanel panel;
     private JButton jButton;
     private JTextField jTextField;
     public VentanaConBoton(String windowName, String buttonName, String fieldTextName) {
@@ -37,5 +37,9 @@ public class VentanaConBoton extends JFrame {
     }
     public String getTextField(){
         return this.jTextField.getText();
+    };
+
+    public JTextField getJTextField(){
+        return this.jTextField;
     };
 }

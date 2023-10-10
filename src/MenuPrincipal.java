@@ -1,5 +1,7 @@
 
-import Ejercicios.*;
+import Ejercicios.Ventanas.CambioWindow;
+import Ejercicios.Ventanas.Problema;
+import Ejercicios.Ventanas.TapaRojaWindow;
 
 import javax.swing.*;
 import java.awt.*;

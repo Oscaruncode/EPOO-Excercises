@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicios.Ventanas;
 
 import Ejercicios.clasesBase.VentanaConBoton;
 
